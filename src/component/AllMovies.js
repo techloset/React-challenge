@@ -7,7 +7,7 @@ import { ReactComponent as Upper } from "../assets/Upper.svg";
 import CategoryBox from "./CategoryBox";
 export default function AllMovies() {
   const [open, setOpen] = useState({
-    rating: true,
+    rating: false,
     genre: false,
   });
   const [search, setsearch] = useState("");
