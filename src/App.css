@@ -9,18 +9,19 @@
 .container {
   margin-top: 200px;
   background-color: white;
-  min-height: 400px;
+  min-height: 588px;
   padding: 20px;
   display: flex;
   flex-direction: row;
+  width: 795px;
 }
 .leftContainer {
-  width: 450px;
+  width: 441px;
 }
 .input {
-  width: 422px;
+  width: 415px;
   border: 2px solid black;
-  height: 48px;
+  height: 42px;
   padding-left: 20px;
 }
 .input:focus {
@@ -36,13 +37,13 @@
 }
 .rating,
 .genre {
-  height: 48px;
+  height: 44px;
   border: 2px solid black;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-inline: 10px;
-  width: 113px;
+  width: 89px;
 }
 .genre {
   margin-left: 10px;
