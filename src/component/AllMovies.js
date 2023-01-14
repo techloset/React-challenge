@@ -18,16 +18,13 @@ export default function AllMovies() {
     const check = selectedRating.find((i) => i.key >= item.rating);
     const selectedCategory = desiredCategory.filter((i) => i.value === true);
     const checkCategory = selectedCategory.find((i) => i.key === item.category);
-
-    if (!selectedRating.length && !selectedCategory.length && search === "") {
-      return item;
-    }
     const checkSearch = item.title.toLowerCase().includes(search.toLowerCase());
 
     if (check || checkCategory || (checkSearch && search !== "")) {
       return item;
     }
   };
+  const renderMoviees = movieList.filter(moviesFilter);
   return (
     <div className="main_container">
       <div className="container">
@@ -38,11 +35,13 @@ export default function AllMovies() {
             placeholder="Enter Movie Name"
             onChange={(e) => setsearch(e.target.value)}
           />
-          <div className="movies_box_container">
-            {movieList.filter(moviesFilter).map((item) => (
-              <Movies movie={item} key={item.id} />
-            ))}
-          </div>
+          {renderMoviees.length > 0&& (
+            <div className="movies_box_container">
+              {renderMoviees.map((item) => (
+                <Movies movie={item} key={item.id} />
+              ))}
+            </div>
+          )}
         </div>
         <div className="rightContainer">
           <div className="rigthHandler">
