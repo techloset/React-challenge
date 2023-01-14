@@ -24,7 +24,7 @@ export default function AllMovies() {
     }
     const checkSearch = item.title.toLowerCase().includes(search.toLowerCase());
 
-    if (check || checkCategory || checkSearch) {
+    if (check || checkCategory || (checkSearch && search !== "")) {
       return item;
     }
   };
