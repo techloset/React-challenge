@@ -20,6 +20,12 @@ export default function AllMovies() {
     const checkCategory = selectedCategory.find((i) => i.key === item.category);
     const checkSearch = item.title.toLowerCase().includes(search.toLowerCase());
 
+    if (selectedRating.length > 0 && selectedCategory.length > 0) {
+      if (check && checkCategory) {
+        return item;
+      }
+      return;
+    }
     if (check || checkCategory || (checkSearch && search !== "")) {
       return item;
     }
@@ -35,7 +41,7 @@ export default function AllMovies() {
             placeholder="Enter Movie Name"
             onChange={(e) => setsearch(e.target.value)}
           />
-          {renderMoviees.length > 0&& (
+          {renderMoviees.length > 0 && (
             <div className="movies_box_container">
               {renderMoviees.map((item) => (
                 <Movies movie={item} key={item.id} />
