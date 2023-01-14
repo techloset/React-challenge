@@ -1,8 +1,12 @@
 import "./App.css";
-import Star from "./assets/Star";
+import AllMovies from "./component/AllMovies";
 
 function App() {
-  return <Star />;
+  return (
+    <>
+      <AllMovies />
+    </>
+  );
 }
 
 export default App;
