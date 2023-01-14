@@ -27,7 +27,7 @@
   outline: none;
 }
 .rightContainer {
-  width: 300px;
+  width: 350px;
   margin-left: 20px;
 }
 .rigthHandler {
@@ -83,7 +83,7 @@
 .ratingBoxContaier {
   border: 2px solid black;
   margin-top: 10px;
-  width: 280px;
+  width: 270px;
   padding: 5px;
 }
 .rowContainer {
