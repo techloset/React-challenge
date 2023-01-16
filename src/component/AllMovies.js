@@ -15,7 +15,14 @@ export default function AllMovies() {
   const [desiredCategory, setDesiredCategory] = useState(categoryList);
   const moviesFilter = (item) => {
     const selectedRating = desiredRating.filter((i) => i.value === true);
-    const check = selectedRating.find((i) => i.key >= item.rating);
+    const check = selectedRating.find((i) => {
+      if (item.rating <= i.key && item.rating > i.key -1) {
+        return true
+      } else {
+        return false
+        
+      }
+    });
     const selectedCategory = desiredCategory.filter((i) => i.value === true);
     const checkCategory = selectedCategory.find((i) => i.key === item.category);
     const checkSearch = item.title.toLowerCase().includes(search.toLowerCase());
