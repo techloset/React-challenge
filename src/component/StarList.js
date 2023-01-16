@@ -12,7 +12,13 @@ export default function StarList({ rating }) {
           rating < item &&
           rating > item - 1;
 
-        return <Star fill={filling} key={rating * index} half={half} />;
+        return (
+          <div style={{
+            marginLeft:-4
+          }}>
+            <Star fill={filling} key={rating * index} half={half}  />
+          </div>
+        );
       })}
     </div>
   );

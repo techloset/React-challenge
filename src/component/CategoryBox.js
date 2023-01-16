@@ -10,11 +10,12 @@ export default function CategoryBox({ desiredCategory, getDesiredCategoryg }) {
         ...val,
         value: exist ? false : true,
       },
-    ].sort((a, b) => a.id - b.id);
+    ].sort((a, b) => a.id - b.id);    
     getDesiredCategoryg(rearrange);
   };
   const anyThingHandler = (val) => {
     const alltrue = desiredCategory.map((item) => ({
+      ...item,
       key: item.key,
       value: val,
     }));

@@ -7,7 +7,6 @@
   justify-content: center;
 }
 .container {
-  margin-top: 200px;
   background-color: white;
   min-height: 588px;
   padding: 20px;
@@ -20,7 +19,7 @@
 }
 .input {
   width: 415px;
-  border: 2px solid black;
+  border: 2px solid #979797;
   height: 42px;
   padding-left: 20px;
 }
@@ -38,19 +37,19 @@
 .rating,
 .genre {
   height: 44px;
-  border: 2px solid black;
+  border: 2px solid #979797;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-inline: 10px;
-  width: 89px;
+  width: 97px;
 }
 .genre {
   margin-left: 10px;
 }
 .movies_box_container {
-  border: 2px solid black;
-  margin-top: 10px;
+  border: 2px solid #979797;
+  margin-top: 5px;
 }
 .moviecontainer {
   padding-inline: 10px;
@@ -82,15 +81,35 @@
   color: #777777;
 }
 .ratingBoxContaier {
-  border: 2px solid black;
-  margin-top: 10px;
-  width: 270px;
+  border: 2px solid #979797;
+  margin-top: 5px;
+  width: 239px;
   padding: 5px;
 }
 .rowContainer {
   display: flex;
   flex-direction: row;
 }
-.anyThing{
-    margin-left: 10px;
+.anyThing {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  
+  letter-spacing: -0.2px;
+  
+  color: #000000;
+  margin-left: 10px;
+}
+
+.genreBoxContaier {
+  border: 2px solid #979797;
+  margin-top: 5px;
+  width: 102px;
+  float: right;
+  height: 127px;
+  margin-right: 40px;
+  padding: 10px;
 }

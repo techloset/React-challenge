@@ -55,9 +55,9 @@ export default function AllMovies() {
               className="rating"
               onClick={() => setOpen({ genre: false, rating: !open.rating })}
             >
-              <p>Rating</p>
+              <div>Rating</div>
 
-              <p>{open.rating ? <Upper /> : <Down />}</p>
+              <div>{open.rating ? <Upper /> : <Down />}</div>
             </div>
             <div
               className="genre"
@@ -67,7 +67,8 @@ export default function AllMovies() {
               <p>{open.genre ? <Upper /> : <Down />}</p>
             </div>
           </div>
-          {(open.genre || open.rating) && (
+
+          {open.rating && (
             <div className="ratingBoxContaier">
               {open.rating && !open.genre && (
                 <RatingBox
@@ -75,6 +76,10 @@ export default function AllMovies() {
                   getDesiredRating={(val) => setdesiredRating(val)}
                 />
               )}
+            </div>
+          )}
+          {open.genre && (
+            <div className="genreBoxContaier">
               {open.genre && !open.rating && (
                 <CategoryBox
                   desiredCategory={desiredCategory}

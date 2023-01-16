@@ -43,6 +43,7 @@ export default function RatingBox({ desiredRating, getDesiredRating }) {
               id=""
               onChange={(e) => checkedHandler(item)}
               checked={item.value}
+              style={{marginRight:6}}
             />
             <StarList rating={item.key} />
           </div>
