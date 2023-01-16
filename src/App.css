@@ -1,0 +1,115 @@
+.star_container {
+  display: flex;
+  flex-direction: row;
+}
+.main_container {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  background-color: white;
+  min-height: 588px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 795px;
+}
+.leftContainer {
+  width: 441px;
+}
+.input {
+  width: 415px;
+  border: 2px solid #979797;
+  height: 42px;
+  padding-left: 20px;
+}
+.input:focus {
+  outline: none;
+}
+.rightContainer {
+  width: 350px;
+  margin-left: 20px;
+}
+.rigthHandler {
+  display: flex;
+  flex-direction: row;
+}
+.rating,
+.genre {
+  height: 44px;
+  border: 2px solid #979797;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 10px;
+  width: 97px;
+}
+.genre {
+  margin-left: 10px;
+}
+.movies_box_container {
+  border: 2px solid #979797;
+  margin-top: 5px;
+}
+.moviecontainer {
+  padding-inline: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.movieTitleContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+}
+.movieTitle {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.2px;
+  color: #000000;
+}
+.movieCategory {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+
+  letter-spacing: -0.2px;
+
+  color: #777777;
+}
+.ratingBoxContaier {
+  border: 2px solid #979797;
+  margin-top: 5px;
+  width: 239px;
+  padding: 5px;
+}
+.rowContainer {
+  display: flex;
+  flex-direction: row;
+}
+.anyThing {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  
+  letter-spacing: -0.2px;
+  
+  color: #000000;
+  margin-left: 10px;
+}
+
+.genreBoxContaier {
+  border: 2px solid #979797;
+  margin-top: 5px;
+  width: 102px;
+  float: right;
+  height: 127px;
+  margin-right: 40px;
+  padding: 10px;
+}
