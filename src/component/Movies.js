@@ -8,7 +8,7 @@ export default function Movies({movie}) {
         <div className="movieTitle">{movie.title}</div>
         <div className="movieCategory">{movie.category}</div>
       </div>
-      <StarList rating={parseInt(movie.rating)}/>
+      <StarList rating={movie.rating}/>
     </div>
   );
 }

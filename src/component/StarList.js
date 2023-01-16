@@ -5,7 +5,14 @@ export default function StarList({ rating }) {
   return (
     <div className="star_container">
       {ratingLength.map((item, index) => {
-        return <Star fill={fillorNot(item, rating)} key={rating * index} />;
+        const filling = fillorNot(item, rating);
+        const half =
+          !filling &&
+          Math.floor(rating) + 1 === item &&
+          rating < item &&
+          rating > item - 1;
+
+        return <Star fill={filling} key={rating * index} half={half} />;
       })}
     </div>
   );
