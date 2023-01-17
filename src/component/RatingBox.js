@@ -3,11 +3,11 @@ import StarList from "./StarList";
 
 export default function RatingBox({ desiredRating, getDesiredRating }) {
   const checkedHandler = (val) => {
-    const newRating = desiredRating.map(item => {
-        if(item.key === val.key) {
-            return {...item, value: !item.value}
-        }
-        return item;
+    const newRating = desiredRating.map((item) => {
+      if (item.key === val.key) {
+        return { ...item, value: !item.value };
+      }
+      return item;
     });
     getDesiredRating(newRating);
   };
@@ -40,12 +40,12 @@ export default function RatingBox({ desiredRating, getDesiredRating }) {
               id=""
               onChange={(e) => checkedHandler(item)}
               checked={item.value}
-              style={{marginRight:6}}
-/>
-<StarList rating={item.key} />
-</div>
-);
-})}
-</div>
-);
+              style={{ marginRight: 6 }}
+            />
+            <StarList rating={item.key} />
+          </div>
+        );
+      })}
+    </div>
+  );
 }
