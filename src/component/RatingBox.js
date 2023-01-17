@@ -3,16 +3,13 @@ import StarList from "./StarList";
 
 export default function RatingBox({ desiredRating, getDesiredRating }) {
   const checkedHandler = (val) => {
-    const exist = desiredRating.find((i) => i.key === val.key).value === true;
-    const remiang = desiredRating.filter((i) => i.key !== val.key);
-    const rearrange = [
-      ...remiang,
-      {
-        ...val,
-        value: exist ? false : true,
-      },
-    ].sort((a, b) => a.key - b.key);
-    getDesiredRating(rearrange);
+    const newRating = desiredRating.map((item) => {
+      if (item.key === val.key) {
+        return { ...item, value: !item.value };
+      }
+      return item;
+    });
+    getDesiredRating(newRating);
   };
   const anyThingHandler = (val) => {
     const alltrue = desiredRating.map((item) => ({
@@ -43,7 +40,7 @@ export default function RatingBox({ desiredRating, getDesiredRating }) {
               id=""
               onChange={(e) => checkedHandler(item)}
               checked={item.value}
-              style={{marginRight:6}}
+              style={{ marginRight: 6 }}
             />
             <StarList rating={item.key} />
           </div>
